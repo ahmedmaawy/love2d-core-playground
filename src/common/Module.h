@@ -57,7 +57,8 @@ public:
 		M_TOUCH,
 		M_VIDEO,
 		M_WINDOW,
-		M_MAX_ENUM
+		M_SAMPLE,
+		M_MAX_ENUM,
 	};
 
 	Module();

@@ -29,6 +29,7 @@
 // C++
 #include <string>
 #include <sstream>
+#include <iostream> 
 
 #ifdef LOVE_WINDOWS
 #include <windows.h>
@@ -83,6 +84,7 @@ extern "C"
 // of addressing implementations directly.
 extern "C"
 {
+	extern int luaopen_love_sample(lua_State *);
 #if defined(LOVE_ENABLE_AUDIO)
 	extern int luaopen_love_audio(lua_State*);
 #endif
@@ -145,6 +147,7 @@ extern "C"
 }
 
 static const luaL_Reg modules[] = {
+	{ "love.sample", luaopen_love_sample },
 #if defined(LOVE_ENABLE_AUDIO)
 	{ "love.audio", luaopen_love_audio },
 #endif
@@ -462,8 +465,10 @@ int luaopen_love(lua_State *L)
 	}
 
 	// Preload module loaders.
-	for (int i = 0; modules[i].name != nullptr; i++)
+	for (int i = 0; modules[i].name != nullptr; i++) {
+		std::cout << "Loading module: " << modules[i].name << " with: " << modules[i].func << "\n";
 		love::luax_preload(L, modules[i].func, modules[i].name);
+	}
 
 	// Necessary for Data-creating methods to work properly in Data subclasses.
 	love::luax_require(L, "love.data");
