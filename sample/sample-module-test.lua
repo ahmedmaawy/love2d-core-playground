@@ -12,10 +12,12 @@ function love.draw()
     local x = 50
     local y = 50
 
+    -- Will display all the modules loaded onto the console.
     for key,value in pairs(love) do
-	    print("found member " .. key);
-	end
+        print("found member " .. key);
+    end
 
+    -- Will use the `doSum` function for the `love.sample` module
     local sum = love.sample.doSum(2, 4)
 
     -- Draws the position on screen.
