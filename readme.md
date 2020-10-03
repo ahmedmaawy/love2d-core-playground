@@ -1,3 +1,16 @@
+Details of Modifications Made
+-----------------------------
+
+### Experiment 1: Implementing the Sample Module
+
+* Created a new module onto Love2D dubbed `sample` that is accessed via the `love.sample` Lua Module. 
+* The module has only one function named `doSum` which sums 2 numbers.
+* The file `[sample-module-test.lua](sample/sample-module-test.lua)` demonstrates the module in action.
+
+
+About Love2D
+------------
+
 LÖVE is an *awesome* framework you can use to make 2D games in Lua. It's free, open-source, and works on Windows, Mac OS X, Linux, Android, and iOS.
 
 [![Build Status: Windows](https://ci.appveyor.com/api/projects/status/u1a69u5o5ej1pus4?svg=true)](https://ci.appveyor.com/project/AlexSzpakowski/love)
