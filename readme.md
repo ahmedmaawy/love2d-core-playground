@@ -5,7 +5,7 @@ Details of Modifications Made
 
 * Created a new module onto Love2D dubbed `sample` that is accessed via the `love.sample` Lua Module. 
 * The module has only one function named `doSum` which sums 2 numbers.
-* The file `[sample-module-test.lua](sample/sample-module-test.lua)` demonstrates the module in action.
+* The file [`sample-module-test.lua`](sample/sample-module-test.lua) demonstrates the module in action.
 
 
 About Love2D
