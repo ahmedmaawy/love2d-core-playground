@@ -1097,6 +1097,18 @@ set(LOVE_SRC_MODULE_WINDOW
 source_group("modules\\window" FILES ${LOVE_SRC_MODULE_WINDOW_ROOT})
 source_group("modules\\window\\sdl" FILES ${LOVE_SRC_MODULE_WINDOW_SDL})
 
+#
+# love.sample
+#
+
+set(LOVE_SRC_MODULE_SAMPLE
+	src/modules/sample/Sample.h
+	src/modules/timer/wrap_Sample.cpp
+	src/modules/timer/wrap_Sample.h
+)
+
+source_group("modules\\sample" FILES ${LOVE_SRC_MODULE_SAMPLE})
+
 ###################################
 # Third-party libraries
 ###################################
@@ -1724,6 +1736,7 @@ set(LOVE_LIB_SRC
 	${LOVE_SRC_MODULE_TOUCH}
 	${LOVE_SRC_MODULE_VIDEO}
 	${LOVE_SRC_MODULE_WINDOW}
+	${LOVE_SRC_MODULE_SAMPLE}
 )
 
 include_directories(
