@@ -1103,8 +1103,8 @@ source_group("modules\\window\\sdl" FILES ${LOVE_SRC_MODULE_WINDOW_SDL})
 
 set(LOVE_SRC_MODULE_SAMPLE
 	src/modules/sample/Sample.h
-	src/modules/timer/wrap_Sample.cpp
-	src/modules/timer/wrap_Sample.h
+	src/modules/sample/wrap_Sample.cpp
+	src/modules/sample/wrap_Sample.h
 )
 
 source_group("modules\\sample" FILES ${LOVE_SRC_MODULE_SAMPLE})
